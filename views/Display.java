@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel; 
 
@@ -17,10 +18,11 @@ public class Display extends JPanel{
 	protected Graphics g;
 	protected String title;
 	protected JPanel principal; //le panel principal
+	private JButton btAdd; 
 	Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
 	int height = (int)dimension.getHeight();
 	int width  = (int)dimension.getWidth();
-	
+
 	public Display(String title)
 	{
 		this.title=title;   
@@ -48,21 +50,9 @@ public class Display extends JPanel{
 		principal=new JPanel();
 		//frame.setContentPane(principal);
 		//frame.setVisible(true);              les 2 methodes je les mis dans GameView , Pour résoudre le truc de panel GETWIDTH
-
+	
 		//Mettre la frame en plein ecran
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		
-		
-		
-		
 	} 
-	
- 
-	
-
-	 
-	
-	
-	
-
 }
